@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>P-rysm</title>
     <script>
-        function sendToAppInventor() {
-            var message = "BLUETOOTH_MESSAGE";
+        function sendToAppInventor(message) {
             if (typeof AppInventor !== "undefined") {
                 AppInventor.setWebViewString(message);
             } else {
@@ -17,6 +16,12 @@
 </head>
 <body>
     <h2>Envoyer un Message Bluetooth</h2>
-    <button onclick="sendToAppInventor()">Envoyer</button>
+    <button onclick="sendToAppInventor("Avancer")">Avancer</button>
+    <button onclick="sendToAppInventor("Reculer")">Reculer</button>
+    <button onclick="sendToAppInventor("Gauche")">Gauche</button>
+    <button onclick="sendToAppInventor("Droite")">Droite</button>
+    <button onclick="sendToAppInventor("Stop")">Stop</button>
+    <button onclick="sendToAppInventor("Ouvrir")">Ouvrir</button>
+    <button onclick="sendToAppInventor("Fermer")">Fermer</button>
 </body>
 </html>
