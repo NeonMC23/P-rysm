@@ -3,22 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>P-rysm</title>
-    <script>
-        function sendToAppInventor(message) {
-            if (typeof AppInventor !== "undefined") {
-                AppInventor.setWebViewString(message);
-            } else {
-                alert("Erreur : Cette fonction ne fonctionne que dans WebViewer de MIT App Inventor.");
-            }
-        }
-    </script>
-    <style>
-        button {
-            margin: 10px;
-            padding: 10px;
-        }
-    </style>
 </head>
 <body>
     <h2>Envoyer un Message Bluetooth</h2>
@@ -29,5 +15,6 @@
     <button onclick="sendToAppInventor('Stop')">Stop</button>
     <button onclick="sendToAppInventor('Ouvrir')">Ouvrir</button>
     <button onclick="sendToAppInventor('Fermer')">Fermer</button>
+    <script src="main.js"></script>
 </body>
 </html>
