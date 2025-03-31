@@ -6,8 +6,12 @@
     <title>Interface Bluetooth</title>
     <script>
         function sendToAppInventor() {
-            var message = "BLUETOOTH_MESSAGE";  // Message envoyé à App Inventor
-            AppInventor.setWebViewString(message);
+            var message = "BLUETOOTH_MESSAGE";
+            if (typeof AppInventor !== "undefined") {
+                AppInventor.setWebViewString(message);
+            } else {
+                alert("Erreur : Cette fonction ne fonctionne que dans WebViewer de MIT App Inventor.");
+            }
         }
     </script>
 </head>
