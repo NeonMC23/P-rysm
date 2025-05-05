@@ -4,6 +4,56 @@ html {
 }
 
 button {
-  margin: 10px;
-  padding: 10px;
+  width: 100px;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  transition: 0.5s;
+  background: #1e1e1e;
+  cursor: pointer;
+  color: lightgreen;
+  box-shadow: 0 0 10px #363636, inset 0 0 10px #363636;
+}
+
+button:hover {
+  animation: a 0.5s 1 linear;
+}
+
+@keyframes a {
+  0% {
+    transform: scale(1.1, 1.1);
+  }
+
+  25% {
+    transform: scale(1.1, 0.9);
+  }
+
+  50% {
+    transform: scale(0.9, 1.1);
+  }
+
+  75% {
+    transform: scale(1.1, 0.9);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.vertical2 {
+  display: flex;
+  flex-wrap: wrap; /* Corrected from 'wrap' to 'flex-wrap' */
+  flex-direction: column; /* Corrected from 'direction' to 'flex-direction' */
+  gap: 10px;
+}
+
+.horizontal {
+  display: flex;
+  flex-wrap: wrap; /* Corrected from 'wrap' to 'flex-wrap' */
+  flex-direction: row; /* Corrected from 'direction' to 'flex-direction' */
+  gap: 10px;
 }
