@@ -1,59 +1,96 @@
-html {
+/* Définir les marges et la taille du corps */
+html, body {
   height: 100%;
-  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1d1d1d;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Style pour le titre */
+h2 {
+  text-align: center;
+  color: lightgreen;
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Conteneur principal pour les boutons */
+.controls-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Conteneur pour les boutons verticaux */
+.vertical, .horizontal {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style des boutons */
 button {
-  width: 100px;
+  width: 120px;
   height: 50px;
-  padding: 15px 15px;
   font-size: 18px;
+  font-weight: bold;
   outline: none;
   border: none;
-  border-radius: 10px;
-  transition: 0.5s;
-  background: #1e1e1e;
-  cursor: pointer;
+  border-radius: 12px;
+  background-color: #333;
   color: lightgreen;
-  box-shadow: 0 0 10px #363636, inset 0 0 10px #363636;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7), inset 0 0 10px rgba(0, 0, 0, 0.7);
+  transition: 0.3s ease-in-out;
 }
 
 button:hover {
-  animation: a 0.5s 1 linear;
+  transform: scale(1.1);
+  background-color: #444;
 }
 
-@keyframes a {
+/* Animation sur survol */
+@keyframes hoverAnim {
   0% {
-    transform: scale(1.1, 1.1);
+    transform: scale(1);
   }
-
-  25% {
-    transform: scale(1.1, 0.9);
-  }
-
   50% {
-    transform: scale(0.9, 1.1);
+    transform: scale(1.1);
   }
-
-  75% {
-    transform: scale(1.1, 0.9);
-  }
-
   100% {
-    transform: scale(1, 1);
+    transform: scale(1);
   }
 }
 
-.vertical2 {
-  display: flex;
-  flex-wrap: wrap; /* Corrected from 'wrap' to 'flex-wrap' */
-  flex-direction: column; /* Corrected from 'direction' to 'flex-direction' */
-  gap: 10px;
+/* Action pour faire agrandir au survol */
+button:hover {
+  animation: hoverAnim 0.5s ease-in-out;
 }
 
-.horizontal {
+/* Conteneur des actions (Stop, Ouvrir, Fermer) */
+.actions {
   display: flex;
-  flex-wrap: wrap; /* Corrected from 'wrap' to 'flex-wrap' */
-  flex-direction: row; /* Corrected from 'direction' to 'flex-direction' */
-  gap: 10px;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Optimisation pour petits écrans */
+@media (max-width: 600px) {
+  .controls-container {
+    flex-direction: column;
+  }
+  button {
+    width: 100px;
+    height: 45px;
+    font-size: 16px;
+  }
 }
