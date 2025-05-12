@@ -15,7 +15,10 @@ html, body {
 h2 {
   text-align: center;
   color: lightgreen;
-  margin-bottom: 20px;
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 5px;
+  margin-right: 5px;
   font-size: 24px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -24,16 +27,22 @@ h2 {
 .controls-container {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
   align-items: center;
 }
 
-/* Conteneur pour les boutons verticaux */
-.vertical, .horizontal {
+/* Style de la classe .vertical : les boutons sont disposés verticalement */
+.vertical {
   display: flex;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; /* Aligne les éléments verticalement */
+  gap: 15px; /* Espacement entre les éléments */
+}
+
+/* Style de la classe .horizontal : les boutons sont disposés horizontalement */
+.horizontal {
+  display: flex;
+  flex-direction: row; /* Aligne les éléments horizontalement */
+  gap: 15px; /* Espacement entre les éléments */
 }
 
 /* Style des boutons */
