@@ -8,19 +8,21 @@
 </head>
 <body>
     <h2>Envoyer un Message Bluetooth</h2>
-  <div class="horizontal">
-    <div class="vertical2">
-      <button onclick="sendToAppInventor('Avancer')">Avancer</button>
-      <button onclick="sendToAppInventor('Reculer')">Reculer</button>
+    <div class="controls-container">
+        <div class="vertical">
+            <button onclick="sendToAppInventor('Avancer')">Avancer</button>
+            <button onclick="sendToAppInventor('Reculer')">Reculer</button>
+        </div>
+        <div class="horizontal">
+            <button onclick="sendToAppInventor('Gauche')">Gauche</button>
+            <button onclick="sendToAppInventor('Droite')">Droite</button>
+        </div>
+        <div class="actions">
+            <button onclick="sendToAppInventor('Stop')">Stop</button>
+            <button onclick="sendToAppInventor('Ouvrir')">Ouvrir</button>
+            <button onclick="sendToAppInventor('Fermer')">Fermer</button>
+        </div>
     </div>
-    <div clas="horizontal">
-      <button onclick="sendToAppInventor('Gauche')">Gauche</button>
-      <button onclick="sendToAppInventor('Droite')">Droite</button>
-    </div>
-      <button onclick="sendToAppInventor('Stop')">Stop</button>
-      <button onclick="sendToAppInventor('Ouvrir')">Ouvrir</button>
-      <button onclick="sendToAppInventor('Fermer')">Fermer</button>
-  </div>
     <script src="main.js"></script>
 </body>
 </html>
