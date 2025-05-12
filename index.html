@@ -7,21 +7,25 @@
     <title>P-rysm</title>
 </head>
 <body>
-    <h2>Envoyer un Message Bluetooth</h2>
-    <div class="controls-container">
-        <div class="vertical">
+  <div class="vertical">
+          <h2>---------------</h2>
             <button onclick="sendToAppInventor('Avancer')">Avancer</button>
             <button onclick="sendToAppInventor('Reculer')">Reculer</button>
+          <h2>---------------</h2>
         </div>
-        <div class="horizontal">
-            <button onclick="sendToAppInventor('Gauche')">Gauche</button>
-            <button onclick="sendToAppInventor('Droite')">Droite</button>
-        </div>
+        <h2>-----------</h2>
+    <div class="controls-container">
+            <h2>--------------------------------------------</h2>
         <div class="actions">
             <button onclick="sendToAppInventor('Stop')">Stop</button>
             <button onclick="sendToAppInventor('Ouvrir')">Ouvrir</button>
             <button onclick="sendToAppInventor('Fermer')">Fermer</button>
         </div>
+      <div class="horizontal">
+            <button onclick="sendToAppInventor('Gauche')">Gauche</button>
+            <button onclick="sendToAppInventor('Droite')">Droite</button>
+        </div>
+        <h2>--------------------------------------------</h2>
     </div>
     <script src="main.js"></script>
 </body>
